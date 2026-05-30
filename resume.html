@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janu Naga Sandeep - Resume Sheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary-color: #1e3a8a;
+            --text-dark: #0f172a;
+            --text-gray: #475569;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .actions-bar {
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back {
+            background: #fff;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-back:hover {
+            background: #f8fafc;
+        }
+
+        .btn-print {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-print:hover {
+            opacity: 0.9;
+        }
+
+        /* Resume Sheet Container */
+        .resume-sheet {
+            max-width: 800px;
+            background: #fff;
+            margin: 0 auto;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        /* Header Styles */
+        .resume-header {
+            margin-bottom: 1.8rem;
+        }
+
+        .name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Section Layouts */
+        .resume-section {
+            margin-top: 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-text {
+            font-size: 0.92rem;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        /* Technical Skills List */
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            font-size: 0.92rem;
+        }
+
+        .skill-group strong {
+            color: var(--text-dark);
+        }
+
+        .skill-group span {
+            color: var(--text-gray);
+        }
+
+        /* Timeline Items */
+        .timeline-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-sub {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-left: 1.2rem;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Projects List */
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-left: 1.2rem;
+        }
+
+        .project-desc li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Certifications & Languages lists */
+        .bullets {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-left: 1.2rem;
+        }
+
+        .bullets li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .actions-bar {
+                display: none;
+            }
+
+            .resume-sheet {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Actions Control Bar -->
+    <div class="actions-bar">
+        <a href="index.html" class="btn btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="btn btn-print">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+    </div>
+
+    <!-- Printable Resume Sheet -->
+    <div class="resume-sheet">
+        <div class="resume-header">
+            <h1 class="name">Janu Naga Sandeep</h1>
+            <div class="title">Data Analyst | Python Developer | SQL | Power BI</div>
+            <div class="contact-info">
+                <span>Chagallu, Andhra Pradesh, India</span>
+                <span><i class="fa-solid fa-phone"></i> 9502994520</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:janunagasandeep@gmail.com">janunagasandeep@gmail.com</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/janu-naga-sandeep-8b4384409/" target="_blank">LinkedIn</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/janunagasandeep-art" target="_blank">GitHub</a></span>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Motivated MCA student with skills in Python, SQL, Excel, Power BI, MySQL, Data Analysis, and Machine Learning basics. Experienced in working with datasets, analyzing data using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn, and creating meaningful reports and visualizations. Seeking an entry-level Data Analyst role to apply analytical, database, and problem-solving skills in real-world business projects.
+            </p>
+        </div>
+
+        <div class="resume-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-list">
+                <div class="skill-group">
+                    <strong>Programming Languages:</strong> <span>Python, SQL</span>
+                </div>
+                <div class="skill-group">
+                    <strong>Data Analysis Libraries:</strong> <span>NumPy, Pandas, Matplotlib, Seaborn</span>
+                </div>
+                <div class="skill-group">
+                    <strong>Visualization Tools:</strong> <span>Power BI, Excel</span>
+                </div>
+                <div class="skill-group">
+                    <strong>Databases:</strong> <span>MySQL, MongoDB</span>
+                </div>
+                <div class="skill-group">
+                    <strong>Concepts:</strong> <span>Data Cleaning, Data Visualization, Exploratory Data Analysis, Machine Learning Basics, OOPs</span>
+                </div>
+                <div class="skill-group">
+                    <strong>Tools:</strong> <span>VS Code, GitHub, Jupyter Notebook</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Data Analyst Certification</span>
+                    <span>Present</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>DataMites</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Currently pursuing a comprehensive professional certification course in Data Analytics.</li>
+                    <li>Gaining practical expertise in SQL database querying, Python data libraries, and Power BI dashboarding.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Master of Computer Applications (MCA)</span>
+                    <span>2024 &ndash; 2026</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>Dravidian University, Kuppam</span>
+                    <span>CGPA: 8.2</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Bachelor of Computer Science (BSC-MPCS)</span>
+                    <span>2020 &ndash; 2023</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>ABN & PRR College of Science, Kovvur</span>
+                    <span>CGPA: 7.0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2 class="section-title">Internship Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Python Full Stack Intern</span>
+                    <span>Glossary SoftTech</span>
+                </div>
+                <div class="timeline-sub">
+                    <span>Fashion Fusion E-Commerce Website</span>
+                    <span>2024</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Developed a fashion e-commerce web application using Python, HTML, CSS, and SQL.</li>
+                    <li>Implemented responsive UI, user authentication, and product management features.</li>
+                    <li>Managed database operations for storing and retrieving user and product data.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="project-item">
+                <h3 class="project-title">Stock Market Price Prediction</h3>
+                <ul class="project-desc">
+                    <li>Developed a stock market price prediction project using Python and Machine Learning.</li>
+                    <li>Collected and analysed historical stock price data to identify trends and patterns.</li>
+                    <li>Performed data cleaning, preprocessing, and feature selection for better model accuracy.</li>
+                    <li>Used Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn for data analysis and visualization.</li>
+                    <li>Built a machine learning model to predict future stock price movements.</li>
+                    <li>Evaluated model performance using accuracy metrics and visualized actual vs predicted prices.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">Real-Time Chat Application Using Node.js</h3>
+                <ul class="project-desc">
+                    <li>Developed a real-time chat application using Node.js and Socket.IO.</li>
+                    <li>Implemented instant messaging features for communication between users.</li>
+                    <li>Used MongoDB to store user and message-related data.</li>
+                    <li>Designed a responsive user interface using HTML, CSS, and JavaScript.</li>
+                    <li>Improved application performance, message delivery, and user experience.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem;">
+            <div>
+                <h2 class="section-title">Certifications</h2>
+                <ul class="bullets">
+                    <li>Python Full Stack Development (240 Hours) &ndash; Glossary SoftTech &amp; APSCHE | Issued 25-05-2024 (ID: GST/LT/ABN/2092)</li>
+                    <li>Certified Data Analyst &ndash; DataMites | Pursuing (Present)</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-title">Languages</h2>
+                <ul class="bullets">
+                    <li>English</li>
+                    <li>Telugu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janu Naga Sandeep | Data Analyst & Python Developer Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Janu Naga Sandeep, Data Analyst and Python Developer. Specializing in Python, SQL, Power BI, and Data Visualization.">
+    <!-- FontAwesome & Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-chart-bar"></i> Sandeep<span>.data</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="badge">
+                    <span class="badge-dot"></span> Open for Opportunities
+                </div>
+                <h1 class="hero-title">Translating Complex Data into <span class="accent">Insightful Analytics</span></h1>
+                <div class="hero-subtitle">Janu Naga Sandeep</div>
+                <p class="hero-desc">
+                    An analytical computer applications post-grad focused on translating raw datasets into actionable business intelligence. Specialized in Python programming, SQL database query engineering, and designing high-fidelity Power BI dashboards.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fa-solid fa-envelope"></i> Hire Me
+                    </a>
+                    <a href="resume.html" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-invoice"></i> View Resume
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="hero-card glass-card">
+                    <div class="hero-profile-container">
+                        <img src="profile.jpg" alt="Janu Naga Sandeep" class="profile-avatar">
+                        <h2 class="profile-name">Janu Naga Sandeep</h2>
+                        <div class="profile-title">Data Analyst & Python Developer</div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan);"></i> Chagallu, Andhra Pradesh, India
+                        </p>
+                        <div class="profile-links">
+                            <a href="https://github.com/janunagasandeep-art" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/janu-naga-sandeep-8b4384409/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:janunagasandeep@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <span class="section-subtitle">Technical Skillset</span>
+            <h2 class="section-title">My Capabilities & Focus</h2>
+        </div>
+        
+        <div class="skills-container">
+            <div class="skills-groups">
+                <div class="skills-category-box">
+                    <h3 class="skills-category-title"><i class="fa-solid fa-code"></i> Programming & Databases</h3>
+                    <div class="skills-tags">
+                        <span class="skills-badge">Python</span>
+                        <span class="skills-badge">SQL</span>
+                        <span class="skills-badge">MySQL</span>
+                        <span class="skills-badge">MongoDB</span>
+                        <span class="skills-badge">Node.js</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category-box">
+                    <h3 class="skills-category-title"><i class="fa-solid fa-chart-line"></i> Analytics & Visualization</h3>
+                    <div class="skills-tags">
+                        <span class="skills-badge">Power BI</span>
+                        <span class="skills-badge">Pandas</span>
+                        <span class="skills-badge">NumPy</span>
+                        <span class="skills-badge">Matplotlib</span>
+                        <span class="skills-badge">Seaborn</span>
+                        <span class="skills-badge">Excel</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category-box">
+                    <h3 class="skills-category-title"><i class="fa-solid fa-graduation-cap"></i> Core Concepts & Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skills-badge">Data Cleaning</span>
+                        <span class="skills-badge">Data Visualization</span>
+                        <span class="skills-badge">Exploratory Data Analysis</span>
+                        <span class="skills-badge">Machine Learning Basics</span>
+                        <span class="skills-badge">OOPs</span>
+                        <span class="skills-badge">VS Code</span>
+                        <span class="skills-badge">GitHub</span>
+                        <span class="skills-badge">Jupyter Notebook</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-viz-box glass-card">
+                <div class="interactive-chart-box">
+                    <h3 class="skills-category-title" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-compass"></i> Skill Distribution Map</h3>
+                    <div class="chart-wrapper" style="height: 300px;">
+                        <canvas id="sandeepSkillsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Experience Section -->
+    <section id="internships">
+        <div class="section-header">
+            <span class="section-subtitle">Practical Experience</span>
+            <h2 class="section-title">Internship Experience</h2>
+        </div>
+        
+        <div class="timeline-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="timeline-card glass-card">
+                <div class="timeline-date">2024</div>
+                <h4 class="timeline-title">Python Full Stack Intern</h4>
+                <div class="timeline-org">Glossary SoftTech</div>
+                <ul class="timeline-desc">
+                    <li>Developed a fashion e-commerce web application ("Fashion Fusion") using Python, HTML, CSS, and SQL.</li>
+                    <li>Implemented responsive UI, user authentication modules, and catalog management features.</li>
+                    <li>Managed backend database operations for secure storage and efficient retrieval of user and product datasets.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-header">
+            <span class="section-subtitle">Academic Background</span>
+            <h2 class="section-title">Education</h2>
+        </div>
+        
+        <div class="timeline-container" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="timeline-card glass-card">
+                <div class="timeline-date">Present</div>
+                <h4 class="timeline-title">Data Analyst Certification</h4>
+                <div class="timeline-org">DataMites</div>
+                <div class="timeline-desc">Currently pursuing a professional certification in Data Analytics, focusing on Python, SQL, Excel, and Power BI dashboards.</div>
+            </div>
+
+            <div class="timeline-card glass-card">
+                <div class="timeline-date">2024 - 2026</div>
+                <h4 class="timeline-title">Master of Computer Applications (MCA)</h4>
+                <div class="timeline-org">Dravidian University, Kuppam</div>
+                <div class="timeline-desc">Pursuing master level education focusing on advanced computation, software engineering, databases, and machine learning. Current CGPA: 8.2</div>
+            </div>
+            
+            <div class="timeline-card glass-card">
+                <div class="timeline-date">2020 - 2023</div>
+                <h4 class="timeline-title">Bachelor of Computer Science (BSC-MPCS)</h4>
+                <div class="timeline-org">ABN & PRR College of Science, Kovvur</div>
+                <div class="timeline-desc">Completed foundation degrees in Mathematics, Physics, and Computer Sciences. CGPA: 7.0</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <span class="section-subtitle">Showcase Portfolio</span>
+            <h2 class="section-title">Case Studies & Projects</h2>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-card">
+                <div class="project-icon-box">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Machine Learning</span>
+                    <span class="project-tag">Pandas</span>
+                    <span class="project-tag">Matplotlib</span>
+                </div>
+                <h3 class="project-title">Stock Market Price Prediction</h3>
+                <p class="project-desc">Designed a supervised predictive project using Python historical datasets, cleaning raw prices, running feature selection, and forecasting market trends.</p>
+                <a class="project-link" data-project="stock">
+                    Case Study <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card glass-card">
+                <div class="project-icon-box">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">Socket.IO</span>
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">JavaScript</span>
+                </div>
+                <h3 class="project-title">Real-Time Chat Application</h3>
+                <p class="project-desc">Built a lightweight instant messaging system with real-time web-socket events, storing user records and history inside a MongoDB cluster.</p>
+                <a class="project-link" data-project="chat">
+                    Case Study <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Languages -->
+    <section id="additional" style="padding-bottom: 6rem;">
+        <div class="cert-lang-grid">
+            <div class="glass-card">
+                <h3 class="timeline-section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;"><i class="fa-solid fa-award"></i> Certifications</h3>
+                <div class="cert-card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem; width: 100%;">
+                        <div class="cert-badge">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Python Full Stack Development (240 Hours)</h4>
+                            <p>Glossary SoftTech &amp; APSCHE | May 2024</p>
+                            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">ID: GST/LT/ABN/2092</p>
+                        </div>
+                    </div>
+                    <a href="#" id="viewCertBtn" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-color: rgba(0, 242, 254, 0.3); margin-top: 0.5rem; width: auto;">
+                        <i class="fa-regular fa-image"></i> View Certificate
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid var(--border-color); width: 100%; margin: 1.5rem 0;">
+
+                <div class="cert-card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1.5rem; width: 100%;">
+                        <div class="cert-badge" style="border-color: var(--accent-teal); color: var(--accent-teal);">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Certified Data Analyst</h4>
+                            <p>DataMites | Present</p>
+                        </div>
+                    </div>
+                    <a href="#" id="viewDataCertBtn" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-color: rgba(0, 242, 254, 0.3); margin-top: 0.5rem; width: auto;">
+                        <i class="fa-regular fa-image"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <h3 class="timeline-section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;"><i class="fa-solid fa-language"></i> Languages</h3>
+                <div class="lang-list">
+                    <div class="lang-item">
+                        <span class="lang-name">English</span>
+                        <div class="lang-dots">
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot"></span>
+                        </div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name">Telugu (Native)</span>
+                        <div class="lang-dots">
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                            <span class="lang-dot filled"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Connect with Sandeep</h2>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info-cards">
+                <div class="contact-info-card glass-card">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value"><a href="tel:+919502994520">+91 95029 94520</a></div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card glass-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="mailto:janunagasandeep@gmail.com">janunagasandeep@gmail.com</a></div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card glass-card">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value"><a href="https://www.linkedin.com/in/janu-naga-sandeep-8b4384409/" target="_blank">View Profile</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="sandeepContactForm">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="b756a186-6b72-4667-a324-ba104b869e79" id="web3FormsKey">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" class="form-control" required placeholder="Job Opportunity / Collab">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="form-control" required placeholder="Hi Sandeep, let's talk about..."></textarea>
+                    </div>
+                    <div class="form-group full-width" style="margin-top: 0.5rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fa-regular fa-paper-plane"></i> Send message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                &copy; 2026 Janu Naga Sandeep. All Rights Reserved.
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/janunagasandeep-art" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/janu-naga-sandeep-8b4384409/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Studies Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div id="modalDetails">
+                <!-- Loaded dynamically by app.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
